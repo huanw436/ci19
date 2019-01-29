@@ -1,0 +1,43 @@
+.title{
+	padding-top:20px;
+	padding-left:0px;
+	text-align:center;
+	font-size:16px;
+	font-family: 'Cutive Mono', monospace;
+	
+}
+#myText2{
+	text-align:left;
+	padding-left:647px;
+	font-family:'Cutive Mono', monospace;
+	font-size:13px;
+	word-spacing:7px;
+}
+.container{
+	padding-top:130px;
+	position:relative;
+	text-align: center;
+	font-family: 'Orbitron', sans-serif;
+	font-size:20px;
+	line-height:1.7;
+}
+img{
+	display:none;
+}
+
+#myText1:hover img{
+	position:absolute;
+	display:block;
+	padding-left:145px;
+}
+#myText:hover img{
+	position:absolute;
+	display: inline-block;
+	padding-left:190px;
+	padding-bottom:100px;
+
+}
+
+p{
+	font-size:40px;
+}
