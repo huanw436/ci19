@@ -1,0 +1,80 @@
+#cursor {
+  animation: blinker 1s step-end infinite; 
+  //you can change 'step-end' to 'linear' for smooth transition
+}
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+html, body {
+        font-family: 'Anton', sans-serif;
+        font-size: 72px;
+        margin:0;
+        width:100%;
+        overflow: hidden;
+}
+/* 1. background gifs */
+    .video{
+        display:flex;
+        position: absolute;
+        z-index: -1;
+    }
+/* 2. Kim's face*/
+    .face{
+        display:block;
+        position:absolute;
+        margin-left:15%;
+        margin-top:3%;
+    }
+/* 3. text*/
+    .text{
+        position: absolute;
+        display:none;
+        /*margin:20vw;*/
+        z-index: 10;
+        line-height: 1em;
+
+    }
+/* 4. animation*/
+    .inner, .innera, .innere {
+        display:block;
+        z-index: 3;
+        position:absolute;
+        z-index: 30;
+    }
+    .innera{
+        margin-left: 35vw;
+        margin-top: 20vh;
+    }
+    .innere{
+        margin-left: 60vw;
+        margin-top: 20vh;
+    }
+/* 5. marquee*/
+    #runningtext{
+        margin-top: 60px;
+        position: absolute;
+        font-size: 100px;
+        z-index: 40;
+        color: black;
+        line-height: 4em;
+        font-weight: normal;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+/* 6. yz*/
+    .inner1 {
+        position: absolute;
+        z-index: 20;
+        margin-top: 10%; 
+        
+    }
+    .inner2 {
+        position: absolute;
+        z-index: 20; 
+        margin-top: 40%;
+    }
+
+
+
+    
