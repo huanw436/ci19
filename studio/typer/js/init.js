@@ -196,8 +196,8 @@ function createElement(k){
 	  			if (0 < bNum <= 5) {	
 	  				textb.style.fontSize = (72 + (bNum * 5)) + 'px';
 	  				textb.style.color = 'rgb('+ r +', '+ 100 +', '+ 0 +')';
-	  				textb.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textb.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textb.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textb.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (bNum > 7) {
 	  				textb.style.color = 'black';
@@ -216,8 +216,8 @@ function createElement(k){
 	  			if (0 < cNum <= 5) {	
 	  				textc.style.fontSize = (72 + (cNum * 5)) + 'px';
 	  				textc.style.color = 'rgb('+ r +', '+ 0 +', '+ 0 +')';
-	  				textc.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textc.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textc.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textc.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (cNum > 7) {
 	  				textc.style.color = 'black';
@@ -235,8 +235,8 @@ function createElement(k){
 	  			if (0 < cNum <= 5) {	
 	  				textd.style.fontSize = (72 + (dNum * 5)) + 'px';
 	  				textd.style.color = 'rgb('+ 100 +', '+ 0 +', '+ b +')';
-	  				textd.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textd.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textd.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textd.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (dNum > 7) {
 	  				textd.style.color = 'black';
@@ -254,8 +254,8 @@ function createElement(k){
 	  			if (0 < eNum <= 5) {	
 	  				texte.style.fontSize = (72 + (eNum * 5)) + 'px';
 	  				texte.style.color = 'rgb('+ 0 +', '+ 0 +', '+ b +')';
-	  				texte.style.top = Math.round(Math.random() * 800) + 'px';
-	  				texte.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				texte.style.top = Math.round(Math.random() * 500) + 'px';
+	  				texte.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (eNum > 7) {
 	  				texte.style.color = 'black';
@@ -275,8 +275,8 @@ function createElement(k){
 	  			if (0 < fNum <= 5) {	
 	  				textf.style.fontSize = (72 + (fNum * 5)) + 'px';
 	  				textf.style.color = 'rgb('+ 0 +', '+ 100 +', '+ b +')';
-	  				textf.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textf.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textf.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textf.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (fNum > 7) {
 	  				textf.style.color = 'black';
@@ -295,8 +295,8 @@ function createElement(k){
 	  			if (0 < gNum <= 5) {	
 	  				textg.style.fontSize = (72 + (gNum * 5)) + 'px';
 	  				textg.style.color = 'rgb('+ 10 +', '+ g +', '+ 0 +')';
-	  				textg.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textg.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textg.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textg.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (gNum > 7) {
 	  				textg.style.color = 'black';
@@ -315,8 +315,8 @@ function createElement(k){
 	  			if (0 < hNum <= 5) {	
 	  				texth.style.fontSize = (72 + (hNum * 5)) + 'px';
 	  				texth.style.color = 'rgb('+ 10 +', '+ g +', '+ 100 +')';
-	  				texth.style.top = Math.round(Math.random() * 800) + 'px';
-	  				texth.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				texth.style.top = Math.round(Math.random() * 500) + 'px';
+	  				texth.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (hNum > 7) {
 	  				texth.style.color = 'black';
@@ -334,8 +334,8 @@ function createElement(k){
 	  			if (0 < iNum <= 5) {	
 	  				texti.style.fontSize = (72 + (iNum * 5)) + 'px';
 	  				texti.style.color = 'rgb('+ 100 +', '+ g +', '+ 100 +')';
-	  				texti.style.top = Math.round(Math.random() * 800) + 'px';
-	  				texti.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				texti.style.top = Math.round(Math.random() * 500) + 'px';
+	  				texti.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (iNum > 7) {
 	  				texti.style.color = 'black';
@@ -354,8 +354,8 @@ function createElement(k){
 	  			if (0 < jNum <= 5) {	
 	  				textj.style.fontSize = (72 + (jNum * 5)) + 'px';
 	  				textj.style.color = 'rgb('+ r +', '+ 100 +', '+ 10 +')';
-	  				textj.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textj.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textj.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textj.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (jNum > 7) {
 	  				textj.style.color = 'black';
@@ -374,8 +374,8 @@ function createElement(k){
 	  			if (0 < kNum <= 5) {	
 	  				textk.style.fontSize = (72 + (kNum * 5)) + 'px';
 	  				textk.style.color = 'rgb('+ r +', '+ 10 +', '+ 100 +')';
-	  				textk.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textk.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textk.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textk.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (kNum > 7) {
 	  				textk.style.color = 'black';
@@ -394,8 +394,8 @@ function createElement(k){
 	  			if (0 < lNum <= 5) {	
 	  				textl.style.fontSize = (72 + (lNum * 5)) + 'px';
 	  				textl.style.color = 'rgb('+ 100 +', '+ 10 +', '+ b +')';
-	  				textl.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textl.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textl.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textl.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (lNum > 7) {
 	  				textl.style.color = 'black';
@@ -413,8 +413,8 @@ function createElement(k){
 	  			if (0 < mNum <= 5) {	
 	  				textm.style.fontSize = (72 + (mNum * 5)) + 'px';
 	  				textm.style.color = 'rgb('+ 10 +', '+ 100 +', '+ b +')';
-	  				textm.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textm.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textm.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textm.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (mNum > 7) {
 	  				textm.style.color = 'black';
@@ -432,8 +432,8 @@ function createElement(k){
 	  			if (0 < nNum <= 5) {	
 	  				textn.style.fontSize = (72 + (nNum * 5)) + 'px';
 	  				textn.style.color = 'rgb('+ 10 +', '+ g +', '+ b +')';
-	  				textn.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textn.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textn.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textn.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (nNum > 7) {
 	  				textn.style.color = 'black';
@@ -452,8 +452,8 @@ function createElement(k){
 	  			if (0 < oNum <= 5) {	
 	  				texto.style.fontSize = (72 + (oNum * 5)) + 'px';
 	  				texto.style.color = 'rgb('+ r +', '+ g +', '+ 10 +')';
-	  				texto.style.top = Math.round(Math.random() * 800) + 'px';
-	  				texto.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				texto.style.top = Math.round(Math.random() * 500) + 'px';
+	  				texto.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (oNum > 7) {
 	  				texto.style.color = 'black';
@@ -471,8 +471,8 @@ function createElement(k){
 	  			if (0 < pNum <= 5) {	
 	  				textp.style.fontSize = (72 + (pNum * 5)) + 'px';
 	  				textp.style.color = 'rgb('+ r +', '+ 10 +', '+ b +')';
-	  				textp.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textp.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textp.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textp.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (pNum > 7) {
 	  				textp.style.color = 'black';
@@ -490,8 +490,8 @@ function createElement(k){
 	  			if (0 < qNum <= 5) {	
 	  				textq.style.fontSize = (72 + (qNum * 5)) + 'px';
 	  				textq.style.color = 'rgb('+ 225 +', '+ 0 +', '+ b +')';
-	  				textq.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textq.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textq.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textq.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (qNum > 7) {
 	  				textq.style.color = 'black';
@@ -509,8 +509,8 @@ function createElement(k){
 	  			if (0 < rNum <= 5) {	
 	  				textr.style.fontSize = (72 + (rNum * 5)) + 'px';
 	  				textr.style.color = 'rgb('+ r +', '+ 225 +', '+ 0 +')';
-	  				textr.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textr.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textr.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textr.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (rNum > 7) {
 	  				textr.style.color = 'black';
@@ -528,8 +528,8 @@ function createElement(k){
 	  			if (0 < sNum <= 5) {	
 	  				texts.style.fontSize = (72 + (sNum * 5)) + 'px';
 	  				texts.style.color = 'rgb('+ 0 +', '+ g +', '+ 225 +')';
-	  				texts.style.top = Math.round(Math.random() * 800) + 'px';
-	  				texts.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				texts.style.top = Math.round(Math.random() * 500) + 'px';
+	  				texts.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (sNum > 7) {
 	  				texts.style.color = 'black';
@@ -548,8 +548,8 @@ function createElement(k){
 	  			if (0 < tNum <= 5) {	
 	  				textt.style.fontSize = (72 + (tNum * 5)) + 'px';
 	  				textt.style.color = 'rgb('+ 50 +', '+ 0 +', '+ b +')';
-	  				textt.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textt.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textt.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textt.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (tNum > 7) {
 	  				textt.style.color = 'black';
@@ -567,8 +567,8 @@ function createElement(k){
 	  			if (0 < uNum <= 5) {	
 	  				textu.style.fontSize = (72 + (uNum * 5)) + 'px';
 	  				textu.style.color = 'rgb('+ 0 +', '+ 50 +', '+ b +')';
-	  				textu.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textu.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textu.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textu.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (uNum > 7) {
 	  				textu.style.color = 'black';
@@ -586,8 +586,8 @@ function createElement(k){
 	  			if (0 < vNum <= 5) {	
 	  				textv.style.fontSize = (72 + (vNum * 5)) + 'px';
 	  				textv.style.color = 'rgb('+ r +', '+ 50 +', '+ 0 +')';
-	  				textv.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textv.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textv.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textv.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (vNum > 7) {
 	  				textv.style.color = 'black';
@@ -605,8 +605,8 @@ function createElement(k){
 	  			if (0 < wNum <= 5) {	
 	  				textw.style.fontSize = (72 + (wNum * 5)) + 'px';
 	  				textw.style.color = 'rgb('+ r +', '+ 0 +', '+ 50 +')';
-	  				textw.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textw.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textw.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textw.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (wNum > 7) {
 	  				textw.style.color = 'black';
@@ -623,8 +623,8 @@ function createElement(k){
 	  			if (0 < xNum <= 5) {	
 	  				textx.style.fontSize = (72 + (xNum * 5)) + 'px';
 	  				textx.style.color = 'rgb('+ r +', '+ 0 +', '+ 0 +')';
-	  				textx.style.top = Math.round(Math.random() * 800) + 'px';
-	  				textx.style.left = Math.round(Math.random() * 1000) + 'px';
+	  				textx.style.top = Math.round(Math.random() * 500) + 'px';
+	  				textx.style.left = Math.round(Math.random() * 800) + 'px';
 	  			}
 	  			if (xNum > 7) {
 	  				textx.style.color = 'black';
