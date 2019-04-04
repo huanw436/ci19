@@ -17,10 +17,15 @@
 
 		function buildPage(data) {
 
-			for( var i = 0; i < data.length; i = i + 1){
+
+			// var categoryq1 = [];
+
+			for( var i = 0; i < data.length; i ++){
 				 var date = document.createElement("h1");
+				 // date.i = i;
 				 var event = document.createElement("h2");
 				 var keyword = document.createElement("h3");
+
 				 document.body.appendChild(date);
 				 document.body.appendChild(event);
 				 document.body.appendChild(keyword);
@@ -28,10 +33,23 @@
 				 event.innerHTML= data[i].event;
 				 keyword.innerHTML = data[i].keyword;
 
+				 	date.style.display = "none";
+				 	event.style.display = "none";
+				 	document.body.style.display = "grid";
+				 	// document.body.style.gridTemplateColumn = "auto, auto";
+
 
 				 var image = document.createElement("img");
 				 image.setAttribute("src", data[i].image);
 				 document.body.appendChild(image);
+
+				
+				 image.addEventListener('click', function(e){
+
+				 	date.style.display = "block";
+				 	event.style.display = "block";
+
+				 });
 
 				 // if(data[i].date == "coffee"){
 				 // 	date.style.color = "brown";
