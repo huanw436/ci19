@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+		img{
+			width: 20%;
+			height: 20%;
+			
+		}
+		.case{
+		
+		}
+
+	</style>
+	<script>
+
+		//load json file
+		// var dataArray = [];
+		var url = "https://raw.githubusercontent.com/huanw436/ci19/master/studio/collection/murdercase.json";
+
+		fetch(url)
+			.then(function(response){return response.json();})
+			.then(function(json){buildPage(json);})
+
+		function buildPage(data) {
+
+			for( var i = 0; i < data.length; i ++){
+				 function test() {
+				 var date = document.createElement("div");
+				 date.setAttribute("class", "case")
+				 var event = document.createElement("div");
+				 date.setAttribute("class", "case")
+				 var keyword = document.createElement("div");
+
+				 //append date, event, keyword
+				 document.body.appendChild(date);
+				 document.body.appendChild(event);
+				 document.body.appendChild(keyword);
+
+				 date.innerHTML = data[i].date;
+				 event.innerHTML= data[i].event;
+				 keyword.innerHTML = data[i].keyword;
+
+				 	date.style.display = "none";
+				 	event.style.display = "none";
+				 	document.body.style.display = "flex";
+
+
+				 // append image
+				 var image = document.createElement("img");
+				 image.setAttribute("src", data[i].image);
+				 document.body.appendChild(image);
+
+
+
+				// click function
+				 image.addEventListener('click', function(){
+
+				 	if( date.style.display == "block"){
+				 		date.style.display = "none";
+				 		event.style.display = "none";
+				 	}else{
+				 		date.style.display = "block";
+				 		event.style.display = "block";
+				 	}
+
+				 });
+
+				 event.style.cursor = "pointer";
+				 event.addEventListener('click', function(){
+
+				 	if (keyword.style.display == "block"){
+				 		keyword.style.display = "none";
+				 	} else {
+				 		keyword.style.display = "block";
+				 	}
+				 });
+
+				}
+				test();
+				 // if(data[i].date == "coffee"){
+				 // 	date.style.color = "brown";
+				 // }
+				 // if(data[i].kind == "water"){
+				 // 	kind.style.color = "skyblue";
+				 // }
+
+				 // var line = document.createElement("hr");
+				 // document.body.appendChild(line);
+
+			}
+
+		}
+
+
+	</script>
+
+</body>
+</html>
