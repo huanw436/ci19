@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTA Drawing Board</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+
+  </head>
+  <body>
+    <style>
+      
+      html,body {
+          height: 100%;
+          margin: 0;
+      }  
+
+      #main {
+          height: 100%;
+          box-sizing: border-box;
+          display: grid;
+          grid-template-columns: 25% 25% 25% 25%;
+          grid-template-rows: 10% auto 25%;
+          grid-template-areas:
+              "title item_name remaining description"
+              "drawing_board drawing_board drawing_board drawing_board"
+              "footer footer footer footer";
+          justify-items: center;
+          align-items: center;
+          font-family: 'IBM Plex Sans', sans-serif;
+          font-weight: 900;
+          white-space: pre;
+          overflow: hidden;
+      }
+
+      #drawing_board{
+          height: 550px;
+          position: fixed;
+          margin-top: 60px;
+      }
+      .item:nth-of-type(1) {
+          grid-area: title;
+          justify-self: start;
+          padding-left: 30px;
+      }
+      
+      .item:nth-of-type(2) {
+          grid-area: item_name;
+          padding-right: 30px;
+      }
+      
+      .item:nth-of-type(3) {
+          grid-area: remaining;
+      }
+      
+      .item:nth-of-type(4) {
+          grid-area: description;
+          justify-self: end;
+          padding-right: 30px;
+      }
+      
+      .item:nth-of-type(5) {
+          grid-area: drawing_board;
+          justify-self: center;
+          width: 100%;
+          height: 100%;
+      }
+      
+      .item:nth-of-type(6) {
+          grid-area: footer;
+          justify-self: stretch;
+          align-self: stretch;
+          display: flex;
+          justify-items: center;
+          align-items: center;
+          justify-content: space-between;
+      }
+      
+      .item:nth-of-type(6)>button {
+          width: 30%;
+          height: 100%;
+          border: 0;
+          cursor: pointer;
+      }
+      
+      .item:nth-of-type(6)>button:focus {
+          outline: 0;
+      }
+      
+      .item:nth-of-type(6)>button:nth-of-type(1) {
+          background: url("../realtime/images/first page icon/pager1.png") 50% 50% no-repeat;
+          background-size: 60% auto;
+      }
+      
+      .item:nth-of-type(6)>button:nth-of-type(2) {
+          background: url("../realtime/images/first page icon/walkman1.png") 50% 50% no-repeat;
+          background-size: 60% auto;
+      }
+
+      .item:nth-of-type(6)>button:nth-of-type(3) {
+          background: url("../realtime/images/first page icon/walkie talkie1.png") 50% 50% no-repeat;
+          background-size: 60% auto;
+      }
+      
+      .item:nth-of-type(6)>button:nth-of-type(4) {
+          background: url("../realtime/images/first page icon/pda1.png") 50% 50% no-repeat;
+          background-size: 60% auto;
+      }
+      
+      .item:nth-of-type(6)>button:nth-of-type(5) {
+          background: url("../realtime/images/first page icon/cell phone1.png") 50% 50% no-repeat;
+          background-size: 60% auto;
+      }
+      
+      .item:nth-of-type(6)>button:nth-of-type(6) {
+          background: url("../realtime/images/first page icon/answering machine1.png") 50% 50% no-repeat;
+          background-size: 60% auto;
+      }
+      
+      .item:nth-of-type(6)>button:nth-of-type(7) {
+          background: url("../realtime/images/first page icon/airconditioner1.png") 50% 50% no-repeat;
+          background-size: 60% auto;
+      }
+
+
+    </style>
+    <script>
+      var div = document.createElement('div');
+      document.body.appendChild(div).id = 'main';
+
+    //<div class="item">
+      for (var i = 0; i <= 5; i++) {
+          var div = document.createElement('div');
+          document.querySelector('#main').appendChild(div).className = 'item';
+      }
+
+    //header
+      document.querySelector(".item:nth-of-type(1)").innerHTML = "MTA\nDrawing Board";
+      document.querySelector(".item:nth-of-type(4)").innerHTML = "Select an item from MTA lost & found,\nand make your own art piece!";
+      
+    //<div id="drawing_board">
+      var num_button, num_remaining;
+      document.querySelector(".item:nth-of-type(5)").id = 'drawing_board';
+
+    //api
+      var xhr = new XMLHttpRequest();
+      xhr.open('get', 'https://cors.io/?http://advisory.mtanyct.info/LPUWebServices/CurrentLostProperty.aspx', true);
+      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function () {
+          // console.log('READYSTATE: ', xhr.readyState);
+          if (xhr.readyState == 4 && xhr.status == 200) {
+              
+              var parser = new DOMParser(),
+                  doc = parser.parseFromString(xhr.responseText, 'application/xml'),
+                  data = {
+                      "Pager": doc.querySelector("[SubCategory=Pager]").getAttribute("count"),
+                      "Walkman": doc.querySelector("[SubCategory=Walkman]").getAttribute("count"),
+                      "Walkie Talkie": doc.querySelector("[SubCategory='Walkie Talkie']").getAttribute("count"),
+                      "PDA": doc.querySelector("[SubCategory=PDA]").getAttribute("count"),
+                      "Cell Phone": doc.querySelector("[SubCategory='Cell phone ']").getAttribute("count"),
+                      "Answering Machine": doc.querySelector("[SubCategory='Answering Machine']").getAttribute("count"),
+                      "Air Conditioner": doc.querySelector("[SubCategory='Air conditioner']").getAttribute("count")
+                  }
+                  console.log(Object.keys(data));
+              // console.log(xhr.responseText);
+              console.log(doc);
+      
+              var background = [
+                  "rgb(255,204,0)",
+                  "rgb(204, 230, 255)",
+                  "rgb(255, 117, 26)",
+                  "rgb(255,51,0)",
+                  "rgb(217,217,217)",
+                  "rgb(117, 163, 163)",
+                  "rgb(0,0,0)",
+              ];
+
+        //icons
+          for (var i = 0; i <= 6; i++) {
+              var button = document.createElement('button');
+              document.querySelector(".item:nth-of-type(6)").appendChild(button).setAttribute("data-num", i);
+              document.querySelector(".item>button[data-num='" + i + "']").setAttribute("data-select", 0);
+              document.querySelector(".item>button[data-num='" + i + "']").addEventListener('click', function(event) {
+                  var main = event.path[2];
+                      this_button = event.path[0];
+  
+                  if (this_button.dataset.select == 0) {
+                      for (var j = 1; j <= document.querySelectorAll(".item>button").length; j++) {
+                          if (this_button.dataset.num != (j - 1)) {
+                              document.querySelector(".item>button[data-num='" + (j - 1) + "']").style.visibility = "hidden";
+                              this_button.setAttribute("data-select", 1);
+                          };
+                      };
+  
+                      main.style.background = background[this_button.dataset.num];
+                      document.querySelector("#main").style.color = (this_button.dataset.num == 6 ? "#fff" : "");
+                      //header2
+                      var item_name = Object.keys(data)[this_button.dataset.num];
+                      document.querySelector(".item:nth-of-type(2)").innerHTML = "Item Name:\n" + item_name;
+                      document.querySelector(".item:nth-of-type(3)").innerHTML = "Remaining:\n" + data[item_name];
+                      document.querySelector(".item:nth-of-type(4)").setAttribute("data-button", 1);
+                      //for p5
+                      num_button = this_button.dataset.num
+                      num_remaining = data[item_name]
+                      if (item_name == "Pager" || item_name == "Walkman" || item_name == "Walkie Talkie" ||   item_name == "PDA" || item_name == "Cell Phone" || item_name == "Answering Machine" ||  item_name == "Air Conditioner") {
+                          var myp5;
+                          myp5 = new p5(s_1, document.getElementById("drawing_board"))
+                      };
+                      // click again
+                  } else {
+                      for (var j = 1; j <= document.querySelectorAll(".item>button").length; j++) {
+                          if (this_button.dataset.num != (j - 1)) {
+                              document.querySelector(".item>button[data-num='" + (j - 1) + "']").style.visibility   = "visible";
+                              this_button.setAttribute("data-select", 0);
+                          };
+                      };
+                      main.style.background = "#fff";
+                      document.querySelector("#main").style.color = "#000";
+                      document.querySelector(".item:nth-of-type(2)").innerHTML = "";
+                      document.querySelector(".item:nth-of-type(3)").innerHTML = "";
+                      document.querySelector(".item:nth-of-type(4)").innerHTML = "Select an item from MTA lost &  found,\nand make your own art piece!";
+                      document.getElementById("drawing_board").innerHTML = "";
+                  };
+              });
+          };
+          };
+      };
+      xhr.send("key=a28d19597a4ba14c38ea5165fd8ef6d8");
+
+//p5
+function s_1(sketch) {
+    let img,
+        random_width, random_height,
+        drawing_board = document.querySelector("#drawing_board")
+    sketch.preload = () => {
+        img = [
+            sketch.loadImage('https://raw.githubusercontent.com/huanw436/ci19/master/studio/realtime/images/drawing/pager2.png'),
+            sketch.loadImage('https://raw.githubusercontent.com/huanw436/ci19/master/studio/realtime/images/drawing/walkman2.png'),
+            sketch.loadImage('https://raw.githubusercontent.com/huanw436/ci19/master/studio/realtime/images/drawing/walkie%20talkie2.png'),
+            sketch.loadImage('https://raw.githubusercontent.com/huanw436/ci19/master/studio/realtime/images/drawing/pda2.png'),
+            sketch.loadImage('https://raw.githubusercontent.com/huanw436/ci19/master/studio/realtime/images/drawing/cell%20phone2.png'),
+            sketch.loadImage('https://raw.githubusercontent.com/huanw436/ci19/master/studio/realtime/images/drawing/answering%20machine2.png'),
+            sketch.loadImage('https://raw.githubusercontent.com/huanw436/ci19/master/studio/realtime/images/drawing/airconditioner2.png')
+        ];
+    };
+    sketch.setup = () => {
+        sketch.createCanvas(drawing_board.clientWidth, drawing_board.clientHeight);
+        sketch.imageMode(sketch.CENTER);
+        
+    };
+    sketch.draw = () => {
+        if (sketch.mouseIsPressed && document.querySelector(".item>button[data-select='1']") && num_remaining > 0 && sketch.mouseY >= 0 && sketch.mouseY <= drawing_board.clientHeight) {
+            random_width = (sketch.random(0.6) + 0.2) * img[num_button].width
+            random_height = random_width / img[num_button].width * img[num_button].height
+            sketch.image(img[num_button], sketch.mouseX, sketch.mouseY, random_width, random_height)
+            num_remaining--
+            document.querySelector(".item:nth-of-type(3)").innerHTML = "Remaining:\n" + num_remaining
+        };
+    };
+};
+  
+    </script>
+  </body>
+</html>
